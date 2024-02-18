@@ -7,7 +7,7 @@ PRODUCT_SOONG_NAMESPACES += \
 
 PRODUCT_COPY_FILES += \
     vendor/lava/LXX503/proprietary/etc/audio_effects.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/audio_effects.conf \
-    vendor/lava/LXX503/proprietary/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
+#     vendor/lava/LXX503/proprietary/etc/libnfc-nci.conf:$(TARGET_COPY_OUT_SYSTEM)/etc/libnfc-nci.conf \
     vendor/lava/LXX503/proprietary/etc/seccomp_policy/mediacodec.policy:$(TARGET_COPY_OUT_SYSTEM)/etc/seccomp_policy/mediacodec.policy \
     vendor/lava/LXX503/proprietary/lib/libdatasource.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libdatasource.so \
     vendor/lava/LXX503/proprietary/lib/libged_sys.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libged_sys.so \
@@ -48,10 +48,10 @@ PRODUCT_COPY_FILES += \
     vendor/lava/LXX503/proprietary/lib64/vendor.mediatek.hardware.pq@2.1.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.mediatek.hardware.pq@2.1.so \
     vendor/lava/LXX503/proprietary/lib64/vendor.mediatek.hardware.pq@2.2.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.mediatek.hardware.pq@2.2.so \
     vendor/lava/LXX503/proprietary/lib64/vendor.mediatek.hardware.pq@2.3.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/vendor.mediatek.hardware.pq@2.3.so \
-    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_dsds.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_dsds.xml \
-    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_qsqs.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_qsqs.xml \
-    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_ss.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_ss.xml \
-    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_tsts.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_tsts.xml \
+#    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_dsds.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_dsds.xml \
+#    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_qsqs.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_qsqs.xml \
+#    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_ss.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_ss.xml \
+#    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_tsts.xml:$(TARGET_COPY_OUT_ODM)/etc/vintf/manifest_tsts.xml \
     vendor/lava/LXX503/proprietary/system_ext/etc/a2dp_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/a2dp_audio_policy_configuration.xml \
     vendor/lava/LXX503/proprietary/system_ext/etc/a2dp_in_audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/a2dp_in_audio_policy_configuration.xml \
     vendor/lava/LXX503/proprietary/system_ext/etc/audio_policy_configuration.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/audio_policy_configuration.xml \
@@ -2265,11 +2265,11 @@ PRODUCT_PACKAGES += \
     android.hardware.wifi.hostapd \
     android.hardware.wifi.supplicant \
     android.hardware.wifi@1.0-service \
-    gnss-default \
+#     gnss-default \
     gnss@2.1-service \
     lbs_hidl_service@1.0 \
     lights-mtk-default \
-    manifest_android.hardware.drm@1.4-service.clearkey \
+#     manifest_android.hardware.drm@1.4-service.clearkey \
     manifest_android.hardware.drm@1.4-service.widevine \
     manifest_face \
     manifest_hwcomposer \
@@ -2278,3 +2278,9 @@ PRODUCT_PACKAGES += \
     memtrack-mediatek \
     power-default \
     vibrator-mtk-default
+
+ODM_MANIFEST_FILES += \
+    vendor/lava/LXX503/proprietary/odm/etc/vintf/manifest_dsds.xml \
+    vendor/lava/LXX503/proprietary/vendor/odm/etc/vintf/manifest_qsqs.xml \
+    vendor/lava/LXX503/proprietary/vendor/odm/etc/vintf/manifest_ss.xml \
+    vendor/lava/LXX503/proprietary/vendor/odm/etc/vintf/manifest_tsts.xml
